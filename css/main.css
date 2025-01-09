@@ -856,9 +856,29 @@ a:not([href]):not([tabindex]):hover {
   margin-right: 5px;
 }
 
-#clients {
-  background: #F2F2F2;
-}
+/* ==========================================================================
+  16. Clients 
+   ========================================================================== */
+   #clients {
+    background: #F2F2F2;
+  }
+  #clients .client-item-wrapper {
+    text-align: center;
+    margin: 0 5px;
+    -moz-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+  }
+  #clients #clients-scroller img:hover {
+    -moz-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    opacity: 1.0;
+  }
+  #clients #clients-scroller .owl-pagination {
+    display: none;
+  }
+  
 /* ==========================================================================
    Blog 
    ========================================================================== */
