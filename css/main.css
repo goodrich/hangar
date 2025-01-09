@@ -397,9 +397,9 @@ a:not([href]):not([tabindex]):hover {
 }
 
 /* ==========================================================================
-  16. Clients 
+  Clients 
    ========================================================================== */
-   #clients {
+  #clients {
     background: #fff;
   }
   #clients .client-item-wrapper {
