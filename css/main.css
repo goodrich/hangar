@@ -308,7 +308,7 @@ a:not([href]):not([tabindex]):hover {
 #video-area {
   overflow: hidden;
   position: relative;
-  height: 1000px;
+  height: 1200px;
 }
 #video-area .contents {
   padding: 180px 0 60px;
