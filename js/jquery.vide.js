@@ -38,7 +38,7 @@
     muted: true,
     loop: true,
     autoplay: true,
-    position: '100% 100%',
+    position: '50% 50%',
     posterType: 'detect',
     resizing: true,
     bgColor: 'transparent',
