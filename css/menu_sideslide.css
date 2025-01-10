@@ -54,9 +54,12 @@
 	top: 15px;
 	right: 0;
 	line-height: 42px;
+	outline: none;
 	text-align: center;
 }
-
+button:focus{
+	outline: none;
+}
 /* Close Button */
 .close-button {
 	width: 45px;
@@ -114,7 +117,7 @@
 }
 
 .icon-list a {
-	color: #0d3559;
+	color: #333;
 	display: block;
 	padding: 0.8em;
 	-webkit-transform: translate3d(0,500px,0);
