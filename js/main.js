@@ -1,33 +1,54 @@
+(function($) {
+  
+  "use strict";
+
 /* 
    CounterUp
    ========================================================================== */
-    jQuery(document).ready(function( $ ) {
-      $('.counter').counterUp({
-        time: 500
-      });
+    $('.counter').counterUp({
+      time: 500
     });
 
 /* 
    MixitUp
    ========================================================================== */
-    $(function(){
-      $('#portfolio').mixItUp();
+  $('#portfolio').mixItUp();
+
+/* 
+   Clients Sponsor 
+   ========================================================================== */
+    var owl = $("#clients-scroller");
+    owl.owlCarousel({
+      items:5,
+      itemsTablet:3,
+      margin:90,
+      stagePadding:90,
+      smartSpeed:450,
+      itemsDesktop : [1199,4],
+      itemsDesktopSmall : [980,3],
+      itemsTablet: [768,3],
+      itemsTablet: [767,2],
+      itemsTabletSmall: [480,2],
+      itemsMobile : [479,1],
     });
+
 
 /* 
    Touch Owl Carousel
    ========================================================================== */
-    $(".touch-slider").owlCarousel({
-        navigation: false,
-        pagination: true,
-        slideSpeed: 1000,
-        stopOnHover: true,
-        autoPlay: true,
-        items: 1,
-        itemsDesktopSmall: [1024, 1],
-        itemsTablet: [600, 1],
-        itemsMobile: [479, 1]
+    var owl = $(".touch-slider");
+    owl.owlCarousel({
+      navigation: false,
+      pagination: true,
+      slideSpeed: 1000,
+      stopOnHover: true,
+      autoPlay: true,
+      items: 1,
+      itemsDesktopSmall: [1024, 1],
+      itemsTablet: [600, 1],
+      itemsMobile: [479, 1]
     });
+
     $('.touch-slider').find('.owl-prev').html('<i class="fa fa-chevron-left"></i>');
     $('.touch-slider').find('.owl-next').html('<i class="fa fa-chevron-right"></i>');
 
@@ -66,7 +87,8 @@
         $('.back-to-top').fadeOut(400);
       }
     });
-    $('.back-to-top').click(function(event) {
+
+    $('.back-to-top').on('click',function(event) {
       event.preventDefault();
       $('html, body').animate({
         scrollTop: 0
@@ -77,57 +99,59 @@
 /* 
    One Page Navigation & wow js
    ========================================================================== */
-  jQuery(function($) {
-      //Initiat WOW JS
-      new WOW().init();
+    //Initiat WOW JS
+    new WOW().init();
 
-      // one page navigation 
-      $('.main-navigation').onePageNav({
-              currentClass: 'active'
-      });    
-  });
+    // one page navigation 
+    $('.main-navigation').onePageNav({
+            currentClass: 'active'
+    }); 
 
-  jQuery(document).ready(function() {
-     
-      $('body').scrollspy({
-          target: '.navbar-collapse',
-          offset: 195
-      });
+    $(window).on('load', function() {
+       
+        $('body').scrollspy({
+            target: '.navbar-collapse',
+            offset: 195
+        });
 
-      $(window).on('scroll', function() {
-          if ($(window).scrollTop() > 200) {
-              $('.fixed-top').addClass('menu-bg');
-          } else {
-              $('.fixed-top').removeClass('menu-bg');
-          }
-      });
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() > 200) {
+                $('.fixed-top').addClass('menu-bg');
+            } else {
+                $('.fixed-top').removeClass('menu-bg');
+            }
+        });
 
-  });
-
-  /* Nivo Lightbox
-  ========================================================*/
-  jQuery(document).ready(function( $ ) {    
-     $('.lightbox').nivoLightbox({
-      effect: 'fadeScale',
-      keyboardNav: true,
     });
-
+/* Nivo Lightbox
+  ========================================================*/   
+   $('.lightbox').nivoLightbox({
+    effect: 'fadeScale',
+    keyboardNav: true,
   });
 
-  /* stellar js
+/* Map Form Toggle
   ========================================================*/
-  $(function(){
-    $.stellar({
-      horizontalScrolling: false,
-      verticalOffset: 40,
-      responsive: true
-    });
+  $('.map-icon').on('click',function (e) {
+      $('#google-map').toggleClass('panel-show');
+      e.preventDefault();
+  });
+
+/* stellar js
+  ========================================================*/
+  $.stellar({
+    horizontalScrolling: false,
+    verticalOffset: 40,
+    responsive: true
   });
 
 /* 
    Page Loader
    ========================================================================== */
-   $(window).load(function() {
-    "use strict";
-    $('#loader').fadeOut();
-   });
+   $(window).on('load',function() {
+      "use strict";
+      $('#loader').fadeOut();
+    });
+
+}(jQuery));
+
