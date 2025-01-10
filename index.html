@@ -22,6 +22,13 @@
     <link rel="stylesheet" href="css/main.css">    
     <link rel="stylesheet" href="css/responsive.css">
 
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+
+      });
+    </script> 
+
   </head>
   <body>
       <div class="menu-wrap">
@@ -97,7 +104,7 @@
         <div class="row" id="clients-scroller">
           <div class="col-md-4 col-sm-6">
            <div class="client-item-wrapper">
-            <a href="https://www.dhl.com/es-es/home.html" target="_blank" rel="noopener noreferrer"><img src="img/proveedores/dhl.png" alt="Click para ver"></a>
+            <a href="https://www.dhl.com/es-es/home.html" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" title="Click aqui"><img src="img/proveedores/dhl.png" alt="Click para ver"></a>
            </div>
           </div>
 
